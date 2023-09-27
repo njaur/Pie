@@ -1,0 +1,101 @@
+#power problem
+x = pow(3, 4)
+print(x)
+#came out to be 81
+
+#min max problem
+list1 = [1, 2, 3, 4, 5]
+minmaxlist = [min(list1), max(list1)]
+print(minmaxlist)
+#i got [1, 5]
+
+#LEAP YEAR THING
+year = 2020
+if year % 4 == 0 and year % 400 == 0 and year % 100 == 0:
+    print("True")
+if year % 4 == 0: 
+    print("true")
+if year % 4 != 0: 
+    print("False")
+#I got true
+
+#BMI thing
+h = 1.8
+w = 60           
+bodymassindex = w/h**2
+print("Ur bmi is:", bodymassindex)
+# i got "Ur bmi is: 18.51851851851852"
+
+#minimum and maximum but with loops 
+#min for loop
+def find_min(num_list):
+    min_val = num_list[0]
+    for i in range(len(num_list)): 
+        if num_list[i] <= min_val: 
+            min_val = num_list[i]
+    return min_val
+
+list = [100, 200, 300, 400]
+print(find_min(list))
+
+#max for loop
+def find_max(num_list):
+    max_val = num_list[0]
+    for i in range(len(num_list)): 
+        if num_list[i] >= max_val: 
+            max_val = num_list[i]
+    return max_val
+
+list = [100, 200, 300, 400]
+print(find_max(list))
+
+#while loop for max 
+i = [1, 2, 3, 5, 4]
+count=0
+max = i[0]
+while count < len(i): 
+    # print(i[count])
+    if i[count] > max:
+        max = i[count]
+    count+=1
+
+print(max)
+#i got 5
+
+#while loop for min
+i = [1, 2, 3, 5, 4]
+count=0
+min = i[0]
+while count < len(i): 
+    # print(i[count])
+    if i[count] < min:
+        min = i[count]
+    count+=1
+
+print(min)
+#i got 1
+
+#rotation list
+def rotate_list_right(data, amount): 
+    return data[-amount:] + data[:-amount]
+print(rotate_list_right([1,2,3,4,5,6,7,8], 1))
+# i got [8, 1, 2, 3, 4, 5, 6, 7]
+
+
+
+#vowel count problem
+vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+def vowel_count(str): 
+    return len([char for char in str if char in vowel])
+print(vowel_count("California"))
+# i got 5 vowels 
+
+#digital root
+n = 134
+def digital_root(n):
+   if(n < 10):
+       return n
+   n = n%10 + digital_root(n // 10)
+   return digital_root(n)
+print(digital_root(n))
+# i got 8
